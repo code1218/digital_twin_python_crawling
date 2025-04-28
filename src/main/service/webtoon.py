@@ -82,6 +82,47 @@ def run():
         webtoonList.append(webtoonDict)
     print(webtoonList)
 
+    [
+        {
+            "dayOfWeef": "월",
+            "webtoonItems": [
+                {
+                    "title": "title1",
+                    "author": "author1"
+                },
+                {
+                    "title": "title2",
+                    "author": "author2"
+                },
+                {
+                    "title": "title3",
+                    "author": "author3"
+                }
+            ]
+        }
+    ]
+
+    [
+        [
+            "(default, '월', 'title1', 'author1')",
+            "(default, '월', 'title2', 'author2')",
+            "(default, '월', 'title3', 'author3')"
+        ],
+        [
+            "(default, '화', 'title1', 'author1')",
+            "(default, '화', 'title2', 'author2')",
+            "(default, '화', 'title3', 'author3')"
+        ]
+    ]
+    [
+        "(default, '월', 'title1', 'author1')",
+        "(default, '월', 'title2', 'author2')",
+        "(default, '월', 'title3', 'author3')",
+        "(default, '화', 'title1', 'author1')",
+        "(default, '화', 'title2', 'author2')",
+        "(default, '화', 'title3', 'author3')"
+    ]
+
     insertSql = list(map(
         lambda webtoonDict:
             list(map(lambda item:

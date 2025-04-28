@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640bfda3-3ed0-48dc-8441-f6b42d44810b" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/db_study/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/db_study/db01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/db_study/db02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/repository/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/repository/webtoon_repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/service/webtoon.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/service/webtoon.py" afterDir="false" />
     </list>
@@ -39,17 +34,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.db01.executor": "Run",
-    "Python.db02.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.webtoon.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.db01.executor&quot;: &quot;Run&quot;,
+    &quot;Python.db02.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.webtoon.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.main">
     <configuration name="db01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="crawling" />
