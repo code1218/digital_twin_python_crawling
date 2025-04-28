@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640bfda3-3ed0-48dc-8441-f6b42d44810b" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/db_study/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/db_study/db01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/db_study/db02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/repository/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/repository/webtoon_repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/service/webtoon.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/service/webtoon.py" afterDir="false" />
     </list>
@@ -36,6 +41,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.db01.executor": "Run",
+    "Python.db02.executor": "Run",
     "Python.main.executor": "Run",
     "Python.webtoon.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -44,6 +51,50 @@
   }
 }]]></component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="db01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="crawling" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/db_study" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/db_study/db01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="db02" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="crawling" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/db_study" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/db_study/db02.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="crawling" />
       <option name="ENV_FILES" value="" />
@@ -91,6 +142,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.db02" />
+        <item itemvalue="Python.db01" />
         <item itemvalue="Python.webtoon" />
       </list>
     </recent_temporary>

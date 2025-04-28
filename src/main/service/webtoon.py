@@ -4,6 +4,9 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
 
+from src.main.repository.webtoon_repository import WebtoonRepository
+
+
 def run():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.get("https://naver.com")
@@ -31,7 +34,7 @@ def run():
 
     webtoonList = []
 
-    for dayOfWeek in dayOfWeeks[1:3]:
+    for dayOfWeek in dayOfWeeks[1:8]:
         dayOfWeek.click()
         sleep(0.5)
 
@@ -44,7 +47,7 @@ def run():
             by=By.CSS_SELECTOR,
             value="#content > div:nth-child(1) > ul > li")
 
-        for webtoonItem in webtoonItems:
+        for webtoonItem in webtoonItems[:4]:
             driver.execute_script("arguments[0].scrollIntoView(true)", webtoonItem)
             webtoonItemImg = webtoonItem.find_element(by=By.CSS_SELECTOR, value="a > div > img")
             webtoonItemImgSrc = webtoonItemImg.get_attribute("src")
@@ -78,6 +81,39 @@ def run():
 
         webtoonList.append(webtoonDict)
     print(webtoonList)
+
+    insertSql = list(map(
+        lambda webtoonDict:
+            list(map(lambda item:
+                f"(default, \'{webtoonDict['dayOfWeek']}\', \'{item['title']}\', \'{item['author']}\', \'{item['rating']}\', \'{item['img']}\')",
+                    webtoonDict["webtoonItems"])),webtoonList))
+
+    extendsInsertSql = []
+
+    for sql in insertSql:
+        extendsInsertSql.extend(sql)
+
+    print(extendsInsertSql)
+    sql = f"""
+    insert into webtoon_tb
+    values
+        {','.join(extendsInsertSql)}
+"""
+    print(sql)
+
+    convertedWebtoonList = list(map(lambda webtoon:
+        list(map(lambda item:
+            (webtoon['dayOfWeek'], item['title'], item['author'], item['rating'], item['img']), webtoon['webtoonItems'])),
+        webtoonList))
+
+    webtoons = []
+    for webtoon in convertedWebtoonList:
+        print(webtoon)
+        webtoons.extend(webtoon)
+
+    WebtoonRepository.insertMany(webtoons)
+    print("크롤링 완료")
+
 
 
 
