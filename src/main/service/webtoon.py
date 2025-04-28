@@ -29,9 +29,17 @@ def run():
         by=By.CSS_SELECTOR,
         value="#wrap > header > div.SubNavigationBar__snb_wrap--A5gfM > nav > ul > li > a")
 
-    for dayOfWeek in dayOfWeeks[1:8]:
+    webtoonList = []
+
+    for dayOfWeek in dayOfWeeks[1:3]:
         dayOfWeek.click()
         sleep(0.5)
+
+        webtoonDict = {
+            "dayOfWeek": dayOfWeek.text,
+            "webtoonItems": []
+        }
+
         webtoonItems = driver.find_elements(
             by=By.CSS_SELECTOR,
             value="#content > div:nth-child(1) > ul > li")
@@ -41,6 +49,35 @@ def run():
             webtoonItemImg = webtoonItem.find_element(by=By.CSS_SELECTOR, value="a > div > img")
             webtoonItemImgSrc = webtoonItemImg.get_attribute("src")
             print(webtoonItemImgSrc)
+            webtoonItemTitle = webtoonItem.find_element(
+                by=By.CSS_SELECTOR,
+                value="div > a:nth-of-type(1) > span")
+            webtoonItemTitleText = webtoonItemTitle.text
+            print(webtoonItemTitleText)
+            webtoonItemAuthor = webtoonItem.find_element(
+                by=By.CSS_SELECTOR,
+                value="div .ContentAuthor__author--CTAAP")
+            webtoonItemAuthorText = webtoonItemAuthor.text
+            print(webtoonItemAuthorText)
+            webtoonItemRating = webtoonItem.find_element(
+                by=By.CSS_SELECTOR,
+                value="div > div:nth-last-of-type(1) > span > span")
+            webtoonItemRatingText = webtoonItemRating.text
+            print(webtoonItemRatingText)
+
+            webtoonItemDict = {
+                "img": webtoonItemImgSrc,
+                "title": webtoonItemTitleText,
+                "author": webtoonItemAuthorText,
+                "rating": webtoonItemRatingText
+            }
+
+            webtoonDict["webtoonItems"].append(webtoonItemDict)
+
+            sleep(0.1)
+
+        webtoonList.append(webtoonDict)
+    print(webtoonList)
 
 
 
